@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivratan Kushwaha | Frontend developer</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-color: #111;
+            --main-font: 'Poppins', sans-serif;
+            --accent-color: #f7a052;
+            --gray-bg: #f5f5f5;
+            /* max-width: 1100px; */
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--main-font); /* Using a consistent font variable */
+            background: #fff;
+            color: #333;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            background: var(--dark-color);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 100px;
+        }
+        
+        .logo img {
+            margin-top: 4px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .logo img:hover {
+            transform: rotate(90deg);
+            transition: transform 0.3s;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-left: 400px;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+            margin: 0;
+            padding: 0;
+            
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            
+        }
+
+        nav ul li a:hover {
+            color: #999;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 35px;
+            margin-right: 100px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #999;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px;
+            text-align: center;
+            flex-direction: column;
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Adjusted for a two-column layout */
+            align-items: center;
+            gap: 80px;
+            max-width: 1200px;
+            width: 100%;
+            
+        }
+
+        .left, .right {
+            max-width: 450px; /* Adjusted for two columns */
+            text-align: left;
+            position: relative;
+        }
+        
+        .left {
+            text-align: left;
+            
+        }
+
+        .left h1, .right h1 {
+            font-size: 5rem;
+            /* margin-bottom: 5px; */
+            font-weight: 600;
+            margin: 0px 0px 5px 0px;
+        }
+        
+        .right h1 {
+            font-size: 40px;
+            letter-spacing: -1px;
+        }
+
+        .left p, .right p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        #subt {
+            font-size: 1.5rem;
+            color: #444;
+            font-weight: 200;
+            margin-bottom: 15px;
+            margin: 0px 0px 30px 0px;
+        }   
+
+        .hero img {
+            /* max-width: 100%; */
+            height: 300px;
+            width: 600px;
+            display: block;
+            border-radius: 20px;
+        }
+
+        /* ---------------- WORK SECTION ---------------- */
+        .work {
+            background: var(--gray-bg);
+            padding: 0 20px 60px;
+            text-align: center;
+            padding: 50px ;
+        }
+        
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+
+        }
+
+        .project-card {
+            width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            padding: 10px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            
+        }
+
+        .project-info {
+            padding: 15px;
+        }
+
+        .project-info h3 {
+            font-size: 16px;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+
+        .project-info p {
+            font-size: 13px;
+            color: #777;
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        .project-arrow {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: #ccc;
+            font-size: 20px;
+        }
+        
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 30px 50px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-left p {
+            margin: 0;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-right: 100px;
+        }
+        
+        .footer-nav a {
+            text-decoration: none;
+            color: #888;
+            font-size: 13px;
+            transition: color 0.3s;
+            gap: 35px;
+        }
+
+        .footer-nav a:hover {
+            color: #000;
+        }
+        
+        /* The scroll to top button is a link in the original code, we'll use a button for better semantics */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s, transform 0.3s, opacity 0.4s;
+            opacity: 0;
+            z-index: 999;
+        }
+
+        .back-to-top i {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: #e8e8e8;
+            transform: translateX(-50%) translateY(-4px);
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 768px) {
+            header, footer {
+                padding: 15px 20px;
+            }
+            
+            .social-icons, .footer-nav {
+                display: none;
+            }
+            
+            nav {
+                justify-content: flex-end;
+            }
+            
+            .hero-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .left, .right {
+                text-align: center;
+            }
+            
+            .hero img {
+                max-width: 250px;
+            }
+            
+            .hero-code {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="slogo.png" alt="S Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="skills.html">skills</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <!-- <li><a href="blog.html">blog</a></li> -->
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://x.com/shivratankushw"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/shivratankushwaha/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/shivratankushwaaha/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/shivratankushwaha"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="left">
+                    <h1>projects.</h1>
+                    <p id="subt">Check out some of my latest product design case studies.</p>
+                    <p>I'm trying to create something which helps people and make their life esay. </p>
+                </div>
+                <div class="right">
+                    <img src="pro.webp" alt="#">
+                </div>
+            </div>
+        </section>
+
+        <section class="work">
+            <div class="projects">
+                <a class="project-card" href="#">
+                    <img src="amazon.png" alt="Amazon Clone">
+                    <div class="project-info">
+                        <h3>Amazon Clone</h3>
+                        <p>Frontend clone of Amazon using HTML & CSS with responsive layout.</p>
+                    </div>
+                    <i class="fas fa-chevron-right project-arrow"></i>
+                </a>
+
+                <a class="project-card" href="#">
+                    <img src="Virtual Theater Experience.png" alt="Virtual Theater Experience">
+                    <div class="project-info">
+                        <h3>Virtual Theater Experience</h3>
+                        <p>Long distance friends can watch movies at same time and they can also chat.</p>
+                    </div>
+                    <i class="fas fa-chevron-right project-arrow"></i>
+                </a>
+
+                <a class="project-card" href="#">
+                    <img src="Currency Convert.png" alt="Currency Converter">
+                    <div class="project-info">
+                        <h3>Currency Convert</h3>
+                        <p>By this you can easy calculate currency of any country</p>
+                    </div>
+                    <i class="fas fa-chevron-right project-arrow"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>© 2025 Shivratan Kushwaha</p>
+        </div>
+        <div class="footer-nav">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="skills.html">skills</a>
+            <a href="projects.html">projects</a>
+            <!-- <a href="blog.html">blog</a> -->
+            <a href="contact.html">contact</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+
+        backToTopBtn.onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+</body>
+</html>

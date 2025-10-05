@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivratan Kushwaha | Frontend developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+   
+    <style>
+        :root {
+            --dark-color: #111;
+            --main-font: 'Poppins', sans-serif;
+            --accent-color: #f7a052;
+            --gray-bg: #f5f5f5;
+            /* max-width: 1100px; */
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--main-font); /* Using a consistent font variable */
+            background: #fff;
+            color: #333;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            background: var(--dark-color);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 100px;
+        }
+        
+        .logo img {
+            margin-top: 4px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .logo img:hover {
+            transform: rotate(90deg);
+            transition: transform 0.3s;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-left: 400px;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+            margin: 0;
+            padding: 0;
+            
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            
+        }
+
+        nav ul li a:hover {
+            color: #999;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 35px;
+            margin-right: 100px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #999;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px;
+            text-align: center;
+            flex-direction: column;
+            
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Adjusted for a two-column layout */
+            align-items: center;
+            gap: 80px;
+            max-width: 1200px;
+            width: 100%;
+            
+        }
+
+        .left, .right {
+            max-width: 450px; /* Adjusted for two columns */
+            text-align: left;
+            position: relative;
+        }
+        
+        .left {
+            text-align: right;
+        }
+
+        .left h1, .right h1 {
+            font-size: 5rem;
+            font-weight: 600;
+            margin: -5px 0px 5px 0px;
+        }
+        
+        .right h1 {
+            /* font-size: 40px; */
+            letter-spacing: -1px;
+        }
+
+        .left p, .right p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        #htop {
+            text-transform: uppercase;
+        }
+
+        #subt {
+            font-size: 1.5rem;
+            color: #444;
+            font-weight: lighter;
+            /* margin-bottom: 15px; */
+            margin: 0px 0px 30px 0px;
+        } 
+
+        .hero img {
+            height: 300px;
+            width: 500px;
+            display: block;
+            border-radius: 20px;
+        }
+
+        /* ---------------- SKILLS SECTION ---------------- */
+        .skills-section {
+            padding: 80px 20px;
+            background: var(--gray-bg);
+            text-align: center;
+        }
+
+        .skills-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skills-category {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .skills-category h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--blue-color);
+            margin-bottom: 30px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-icon {
+            font-size: 48px;
+            color: var(--blue-color);
+            margin-bottom: 10px;
+        }
+
+        .skill-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 30px 50px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-left p {
+            margin: 0;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-right: 100px;
+        }
+        
+        .footer-nav a {
+            text-decoration: none;
+            color: #888;
+            font-size: 13px;
+            transition: color 0.3s;
+            gap: 35px;
+        }
+
+        .footer-nav a:hover {
+            color: #000;
+        }
+        
+        /* The scroll to top button is a link in the original code, we'll use a button for better semantics */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s, transform 0.3s, opacity 0.4s;
+            opacity: 0;
+            z-index: 999;
+        }
+
+        .back-to-top i {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: #e8e8e8;
+            transform: translateX(-50%) translateY(-4px);
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 768px) {
+            header, footer {
+                padding: 15px 20px;
+            }
+            
+            .social-icons, .footer-nav {
+                display: none;
+            }
+            
+            nav {
+                justify-content: flex-end;
+            }
+            
+            .hero-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .left, .right {
+                text-align: center;
+            }
+            
+            .hero img {
+                max-width: 250px;
+            }
+            
+            .hero-code {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="slogo.png" alt="S Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="skills.html">skills</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <!-- <li><a href="blog.html">blog</a></li> -->
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://x.com/shivratankushw"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/shivratankushwaha/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/shivratankushwaaha/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/shivratankushwaha"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                
+                <div class="right">
+                    <p id="htop">Front end developer</p>
+                    <h1>skills.</h1>
+                    <p id="subt">I have a strong foundation in C++ and Data Structures.</p>
+                    <p>I'm actively building my skills in frontend development and am currently learning Node.js, React and PostgreSQL to become a full-stack developer.</p>
+                </div>
+
+                <div class="left">
+                    <img src="ski.jpg" alt="#">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="skills-section">
+                <div class="skills-container">
+
+                    <div class="skills-category">
+                        <h2>Programming Languages</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-code skill-icon"></i>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-java skill-icon"></i>
+                                <span class="skill-name">Java</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-cogs skill-icon"></i>
+                                <span class="skill-name">C/C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Data & Analytics</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-database skill-icon"></i>
+                                <span class="skill-name">SQL</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-chart-line skill-icon"></i>
+                                <span class="skill-name">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category">
+                        <h2>Web Technologies</h2>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fab fa-html5 skill-icon"></i>
+                                <span class="skill-name">HTML</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-css3-alt skill-icon"></i>
+                                <span class="skill-name">CSS</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-js-square skill-icon"></i>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-bootstrap skill-icon"></i>
+                                <span class="skill-name">Bootstrap</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-node-js skill-icon"></i>
+                                <span class="skill-name">Node.js</span>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fab fa-react skill-icon"></i>
+                                <span class="skill-name">React</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>© 2025 Shivratan Kushwaha</p>
+        </div>
+        <div class="footer-nav">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="skills.html">skills</a>
+            <a href="projects.html">projects</a>
+            <!-- <a href="blog.html">blog</a> -->
+            <a href="contact.html">contact</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+
+        backToTopBtn.onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+</body>
+</html>

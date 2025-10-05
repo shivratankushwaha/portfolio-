@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivratan Kushwaha | Frontend developer</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --dark-color: #111;
+            --main-font: 'Poppins', sans-serif;
+            --accent-color: #f7a052;
+            --gray-bg: #f5f5f5;
+            /* max-width: 1100px; */
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--main-font); /* Using a consistent font variable */
+            background: #fff;
+            color: #333;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            background: var(--dark-color);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 100px;
+        }
+        
+        .logo img {
+            margin-top: 4px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .logo img:hover {
+            transform: rotate(90deg);
+            transition: transform 0.3s;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-left: 400px;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+            margin: 0;
+            padding: 0;
+            
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            
+        }
+
+        nav ul li a:hover {
+            color: #999;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 35px;
+            margin-right: 100px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #999;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px;
+            text-align: center;
+            flex-direction: column;
+            
+        }
+        
+        .hero-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Adjusted for a two-column layout */
+            align-items: center;
+            gap: 80px;
+            max-width: 1200px;
+            width: 100%;
+            box-shadow: 0 2px rgba(0,0,0,0.1);
+            padding-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        .left, .right {
+            max-width: 450px; /* Adjusted for two columns */
+            text-align: left;
+            position: relative;
+        }
+        
+        .left {
+            text-align: left;
+            
+        }
+
+        .left h1, .right h1 {
+            font-size: 5rem;
+            /* margin-bottom: 5px; */
+            font-weight: 600;
+            margin: 0px 0px 5px 0px;
+        }
+        
+        .right h1 {
+            font-size: 40px;
+            letter-spacing: -1px;
+        }
+
+        .left p, .right p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        #subt {
+            font-size: 1.5rem;
+            color: #444;
+            font-weight: 200;
+            margin-bottom: 15px;
+            margin: 0px 0px 30px 0px;
+        }   
+
+        .hero img {
+            /* max-width: 100%; */
+            /* height: 300px; */
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+        }
+
+        /* ---------------- WORK SECTION ---------------- */
+        .work {
+            background: var(--main-font);
+            padding: 0 20px 60px;
+            text-align: center;
+            padding: 50px ;
+            margin: -10px;
+            
+        }
+        
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+
+        .project-card {
+            width: 150px;
+            height: 100px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            padding: 10px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            /* height: 180px; */
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            
+        }
+
+        /* ---------------- GRAPH SECTION ---------------- */
+        .graphpart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            padding: 50px 20px;
+            background: #fafafa;
+            flex-wrap: wrap;
+            text-align: center;
+            border: #dddddd solid 1px;
+        }
+
+        .part h3 {
+            font-size: 2.3rem;
+            text-align: left;
+            font-weight: lighter;
+            margin-bottom: 50px;
+        }
+
+        .part p{
+            list-style-type: none;
+            font-size: 1.5rem;
+            color: #555;
+            margin: 8px 0;
+            text-align: left;
+            font-weight: lighter;
+        }
+        
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 30px 50px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-left p {
+            margin: 0;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-right: 100px;
+        }
+        
+        .footer-nav a {
+            text-decoration: none;
+            color: #888;
+            font-size: 13px;
+            transition: color 0.3s;
+            gap: 35px;
+        }
+
+        .footer-nav a:hover {
+            color: #000;
+        }
+        
+        /* The scroll to top button is a link in the original code, we'll use a button for better semantics */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s, transform 0.3s, opacity 0.4s;
+            opacity: 0;
+            z-index: 999;
+        }
+
+        .back-to-top i {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: #e8e8e8;
+            transform: translateX(-50%) translateY(-4px);
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 768px) {
+            header, footer {
+                padding: 15px 20px;
+            }
+            
+            .social-icons, .footer-nav {
+                display: none;
+            }
+            
+            nav {
+                justify-content: flex-end;
+            }
+            
+            .hero-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .left, .right {
+                text-align: center;
+            }
+            
+            .hero img {
+                max-width: 250px;
+            }
+            
+            .hero-code {
+                display: none;
+            }
+        }
+
+        /* @media (min-width: 768px) {
+            body {
+                padding: 3rem;
+            }
+        } */
+
+        .container-wrapper {
+            max-width: 1200px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            /* border-bottom: #d0d0d0 solid 1px; */
+            
+        }
+
+        .container-wrapper, .facts-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            /* margin-top: 2rem;
+            margin-bottom: 2rem; */
+        }
+
+        .card {
+            width: 40%;
+            background-color: #f7f7f7;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            /* padding: 2rem; */
+            margin-top: -100px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* @media (min-width: 768px) {
+            .card {
+                padding: 3rem;
+            }
+        } */
+
+        .link {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            color: #4a4a4a;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .link:hover {
+            color: #000000;
+        }
+
+        .image-rotate-left {
+            transform: rotate(-5deg);
+        }
+
+        .image-rotate-right {
+            transform: rotate(5deg);
+        }
+
+        .hero-section {
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        /* @media (min-width: 768px) {
+            .hero-section {
+                margin-top: 4rem;
+                margin-bottom: 6rem;
+                flex-direction: row;
+                gap: 4rem;
+                text-align: left;
+            }
+        } */
+
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* @media (min-width: 768px) {
+            .hero-image-container {
+                width: 50%;
+                justify-content: flex-end;
+            }
+        } */
+
+        .hero-image-main {
+            border-radius: 1rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-pic-container {
+            position: absolute;
+            top: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8rem;
+            height: 8rem;
+            overflow: hidden;
+            border-radius: 9999px;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* @media (min-width: 768px) {
+            .profile-pic-container {
+                top: -4rem;
+                left: initial;
+                right: initial;
+                transform: translateX(0);
+            }
+        } */
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-text-container {
+            /* margin-top: 4rem; */
+            width: 100%;
+        }
+
+        /* @media (min-width: 768px) {
+            .hero-text-container {
+                margin-top: 0;
+                width: 50%;
+            }
+        } */
+
+        .section-heading {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* @media (min-width: 768px) {
+            .section-heading {
+                font-size: 2.25rem;
+            }
+        } */
+
+        .section-paragraph {
+            font-size: 1.125rem;
+            line-height: 1.625;
+            max-width: 36rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* @media (min-width: 768px) {
+            .section-paragraph {
+                font-size: 1.25rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        } */
+
+        .facts-section {
+            /* margin-top: 4rem;
+            margin-bottom: 6rem; */
+            text-align: center;
+        }
+
+        /* @media (min-width: 768px) {
+            .facts-section {
+                text-align: left;
+            }
+        } */
+
+        .facts-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.125rem;
+            line-height: 1.625;
+            text-align: center;
+        }
+
+        /* @media (min-width: 768px) {
+            .facts-list {
+                font-size: 1.25rem;
+            }
+        } */
+
+        .facts-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* .featured-section {
+            margin-top: 4rem;
+            margin-bottom: 6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        } */
+
+        .fact-image {
+            text-align: right;
+        }
+
+        /* @media (min-width: 768px) {
+            .featured-section {
+                flex-direction: row-reverse;
+                gap: 4rem;
+            }
+        } */
+
+        .featured-image-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* @media (min-width: 768px) {
+            .featured-image-container {
+                width: 50%;
+                justify-content: flex-start;
+            }
+        } */
+
+        .featured-image-main {
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 10;
+            width: 66.666667%;
+            max-width: 10rem;
+        }
+
+        .featured-image-secondary {
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: -2.5rem;
+            z-index: 20;
+            width: 66.666667%;
+            max-width: 10rem;
+        }
+
+        .book-section {
+            /* margin-top: 2rem;
+            margin-bottom: 2rem; */
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            /* gap: 2rem; */
+        }
+
+        /* @media (min-width: 768px) {
+            .book-section {
+                flex-direction: row;
+                gap: 4rem;
+            }
+        } */
+
+        .book-image-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* @media (min-width: 768px) {
+            .book-image-container {
+                width: 50%;
+                justify-content: flex-end;
+            }
+        } */
+
+        .book-image-main {
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 20;
+            width: 66.666667%;
+            max-width: 10rem;
+        }
+
+        .book-image-secondary {
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: -2.5rem;
+            opacity: 0.7;
+            width: 66.666667%;
+            max-width: 10rem;
+        }
+
+        .book-image-tertiary {
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: -5rem;
+            opacity: 0.5;
+            width: 66.666667%;
+            max-width: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="slogo.png" alt="S Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="skills.html">skills</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <!-- <li><a href="blog.html">blog</a></li> -->
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://x.com/shivratankushw"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/shivratankushwaha/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/shivratankushwaaha/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/shivratankushwaha"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="left">
+                    <h1>about.</h1>
+                    <p id="subt">I am an MCA student passionate about programming and web development.</p>
+                    <p>I enjoy building projects that solve real problems and improve efficiency.</p>
+                </div>
+                <div class="right">
+                    <img src="img.jpg" alt="#">
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="projects">
+                    <a class="project-card" href="#">
+                        <img src="8.jpg" alt="Amazon Clone">   
+                    </a>
+
+                    <a class="project-card" href="#">
+                        <img src="9.jpg" alt="Virtual Theater Experience">
+                
+                    </a>
+
+                    <a class="project-card" href="#">
+                        <img src="6.jpg" alt="Currency Converter">
+                        
+                    </a>
+
+                    <a class="project-card" href="#">
+                        <img src="4.webp" alt="Amazon Clone">   
+                    </a>
+
+                    <a class="project-card" href="#">
+                        <img src="3.jpg" alt="Virtual Theater Experience">
+                
+                    </a>
+
+                    <a class="project-card" href="#">
+                        <img src="1.jpg" alt="Currency Converter">
+                        
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="graphpart">
+            <div class="part pright">
+                <h3>Part Web Dev</h3>
+                <p>Front-end development</p>
+                <p>HTML / CSS</p>
+                <p>JavaScript</p>
+                <p>Bootstrap</p>
+                <p>Eating pizza</p>
+            </div>
+            <div >
+                <img src="webdsa.png" alt="Web Dev & DSA">
+            </div>
+            <div class="part pleft">
+                <h3>Part DSA</h3>
+                <p>C++</p>
+                    <p>Array / Vector</p>
+                    <p>Sorting Algorithms</p>
+                    <p>Strings</p>
+                    <p>"Swearing at my computer"</p>
+            </div>
+        </section>
+
+        <section>
+            <!-- Featured Here & There Section -->
+            <div class="container-wrapper featured-section">
+                
+                <div class="hero-text-container" style="text-align: center;">
+                    <h2 class="section-heading">Data Structures & Algorithms</h2>
+                    <p class="section-paragraph">
+                        I'm learning Data Structures & Algorithms by C++ programming Languages. My learning platform is Apna College on YouTube.
+                    </p>
+                    <a href="#" class="link block" style="margin-top: 1rem; font-size: 1.25rem;">View my work</a>
+                </div>
+                <div class="featured-image-container">
+                    <img src="c++code.png" alt="A magazine cover titled 'Web Designer'." class="featured-image-main image-rotate-right">
+                    <img src="c++.jpg" alt="A magazine cover titled 'Smashing'." class="featured-image-secondary image-rotate-left">
+                </div>
+            </div>
+
+            <!-- My Book Section -->
+            <div class="container-wrapper book-section">
+                <div class="book-image-container">
+                    <img src="udemy.png" alt="A book cover titled 'Practical UI'." class="book-image-main">
+                    <img src="webcode.png" alt="A second book cover." class="book-image-secondary">
+                    <img src="weblive.png" alt="A third book cover." class="book-image-tertiary">
+                </div>
+                <div class="hero-text-container" style="text-align: center;">
+                    <h2 class="section-heading">Full-Stack Web Developer</h2>
+                    <p class="section-paragraph">
+                        I'm learning Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 and DApps. My mentor is Dr.Angela Yu and learning platform is Udemy.
+                    </p>
+                    <a href="#" class="link block" style="margin-top: 1rem; font-size: 1.25rem;">View my work</a>
+                </div>
+            </div>
+
+            <!-- Random Facts Section -->
+            <div class="container-wrapper facts-section">
+                <div class="card">
+                    <h2 class="section-heading" style="margin-bottom: 1.5rem;">Random facts</h2>
+                    <ul class="facts-list">
+                        <li>I'm slightly addicted to <a href="#" class="link">social media</a></li>
+                        <li>Gardening is my zen time</li>
+                        <li>I want to live on Pandora</li>
+                        <li>I'm a bit of a clean freak</li>
+                        <li>I love to cook (and eat)</li>
+                        <li>I'm into interior design</li>
+                        <li>I enjoy creating things</li>
+                        <li>Yoda is my mentor</li>
+                        <li>I drink a lot of tea</li>
+                    </ul>
+                </div>
+                <div class="fact-image">
+                    <img src="factimage.jpg" alt="#" width="400px">
+                </div>
+                
+            </div>
+
+            <!-- Hero / My Story Section -->
+            <div class="container-wrapper hero-section">
+                <div class="hero-image-container">
+                    <img src="4.webp" alt="A clean workspace with a computer monitor, laptop, and desk plant." class="hero-image-main">
+                    <div class="profile-pic-container">
+                        <img src="img.jpg" alt="A circular profile picture of a person smiling." class="profile-pic">
+                    </div>
+                </div>
+                <div class="hero-text-container">
+                    <h2 class="section-heading">My story</h2>
+                    <p class="section-paragraph">
+                        Learn a little bit more about me, how I got into design, and how I built my career as a product designer. I've included key things I've learned, book recommendations, and even some sneak peeks of the first websites I created.
+                    </p>
+                    <!-- <a href="#" class="link block" style="margin-top: 1rem; font-size: 1.25rem;">Read my story</a> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>© 2025 Shivratan Kushwaha</p>
+        </div>
+        <div class="footer-nav">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="skills.html">skills</a>
+            <a href="projects.html">projects</a>
+            <!-- <a href="blog.html">blog</a> -->
+            <a href="contact.html">contact</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+
+        backToTopBtn.onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+</body>
+</html>

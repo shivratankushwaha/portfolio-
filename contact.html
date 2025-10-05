@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivratan Kushwaha | Frontend developer</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+    
+    <!-- Google Fonts for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-color: #111;
+            --main-font: 'Poppins', sans-serif;
+            --accent-color: #f7a052;
+            --gray-bg: #f5f5f5;
+            /* max-width: 1100px; */
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--main-font); /* Using a consistent font variable */
+            background: #fff;
+            color: #333;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            background: var(--dark-color);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -2px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 100px;
+        }
+        
+        .logo img {
+            margin-top: 4px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .logo img:hover {
+            transform: rotate(90deg);
+            transition: transform 0.3s;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin-left: 400px;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+            margin: 0;
+            padding: 0;
+            
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            
+        }
+
+        nav ul li a:hover {
+            color: #999;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 35px;
+            margin-right: 100px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #999;
+        }
+
+        /* ---------------- CONTACT HEADER SECTION ---------------- */
+        .contact-header {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .contact-content h1 {
+            font-size: 5rem;
+            font-weight: 600;
+            margin: 0px;
+        }
+        
+        .contact-content p {
+            font-size: 16px;
+            color: #666;
+            margin: 0px 0 40px;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-link i {
+            font-size: 24px;
+        }
+
+        .contact-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ---------------- FORM SECTION ---------------- */
+        .form-section {
+            background: var(--gray-bg);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        
+        .form-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        
+        .form-group.message {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-actions {
+            grid-column: 2 / 3;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+        
+        .form-actions button {
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .form-actions button:hover {
+            background: var(--accent-color);
+        }
+
+        .contact-image img{
+            border-radius: 20px;
+        }
+        
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 30px 50px;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-left p {
+            margin: 0;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-right: 100px;
+        }
+        
+        .footer-nav a {
+            text-decoration: none;
+            color: #888;
+            font-size: 13px;
+            transition: color 0.3s;
+            gap: 35px;
+        }
+
+        .footer-nav a:hover {
+            color: #000;
+        }
+        
+        /* The scroll to top button is a link in the original code, we'll use a button for better semantics */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s, transform 0.3s, opacity 0.4s;
+            opacity: 0;
+            z-index: 999;
+        }
+
+        .back-to-top i {
+            font-size: 20px;
+            color: #666;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background: #e8e8e8;
+            transform: translateX(-50%) translateY(-4px);
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+        @media (max-width: 768px) {
+            header, footer {
+                padding: 15px 20px;
+            }
+            
+            .social-icons, .footer-nav {
+                display: none;
+            }
+            
+            nav {
+                justify-content: flex-end;
+            }
+            
+            .hero-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .left, .right {
+                text-align: center;
+            }
+            
+            .hero img {
+                max-width: 250px;
+            }
+            
+            .hero-code {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="slogo.png" alt="S Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="skills.html">skills</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <!-- <li><a href="blog.html">blog</a></li> -->
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://x.com/shivratankushw"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/shivratankushwaha/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/shivratankushwaaha/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/shivratankushwaha"><i class="fab fa-github"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- CONTACT HEADER SECTION -->
+        <section class="contact-header">
+            <div class="contact-content">
+                <h1>contact.</h1>
+                <p>Get in touch with me via social media or send me an email.</p>
+                
+                <div class="social-links">
+                    <a href="https://x.com/shivratankushw" class="social-link">
+                        <i class="fab fa-twitter-square"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://github.com/shivratankushwaha" class="social-link">
+                        <i class="fab fa-github-square"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shivratankushwaha/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/shivratankushwaaha/" class="social-link">
+                        <i class="fab fa-instagram-square"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-image">
+                <img src="img.jpg" alt="Shivratan Kushwaha Image">
+            </div>
+        </section>
+
+        <!-- FORM SECTION -->
+        <section class="form-section">
+            <h2>Send me an email</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group message">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Send email</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>© 2025 Shivratan Kushwaha</p>
+        </div>
+        <div class="footer-nav">
+            <a href="home.html">home</a>
+            <a href="about.html">about</a>
+            <a href="skills.html">skills</a>
+            <a href="projects.html">projects</a>
+            <!-- <a href="blog.html">blog</a> -->
+            <a href="contact.html">contact</a>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTopBtn"><i class="fas fa-chevron-up"></i></a>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        };
+
+        backToTopBtn.onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+</body>
+</html>
